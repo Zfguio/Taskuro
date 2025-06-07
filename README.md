@@ -1,4 +1,3 @@
-Taskuro
 Taskuro is a work-in-progress task management app tailored for small businesses. Inspired by tools like Jira, it's focused on simplicity, offline use, and storing everything locally on your device — no accounts, no cloud, just you and your tasks.
 
 ⚠️ Early development stage — only the login page exists for now, but core ideas and UI may change rapidly. (Honestly, even login might get scrapped — local-only makes it kind of pointless.)
