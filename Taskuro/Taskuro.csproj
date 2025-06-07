@@ -68,17 +68,17 @@
 	  <Folder Include="Controls\Private\" />
 	  <Folder Include="Controls\Public\" />
 	  <Folder Include="Models\" />
-	  <Folder Include="Commands\" />
 	  <Folder Include="Constant\" />
 	  <Folder Include="Data\" />
 	  <Folder Include="Servicies\Interfaces\" />
 	  <Folder Include="Themes\" />
 	  <Folder Include="Utilities\" />
-	  <Folder Include="ViewModels\" />
-	  <Folder Include="Views\Private\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Private\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Public\LoginPage\LoginPageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

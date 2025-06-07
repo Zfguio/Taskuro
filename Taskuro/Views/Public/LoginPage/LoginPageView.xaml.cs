@@ -5,5 +5,6 @@ public partial class LoginPageView : ContentPage
 	public LoginPageView()
 	{
 		InitializeComponent();
-	}
+		BindingContext = new ViewModels.Public.LoginPageViewModel();
+    }
 }

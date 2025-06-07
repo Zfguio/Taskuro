@@ -12,7 +12,7 @@ namespace Taskuro
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new LoginPageView());
+            return new Window(new NavigationPage(LoginPageView));
         }
     }
 }

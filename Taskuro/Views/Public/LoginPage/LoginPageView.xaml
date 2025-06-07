@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Taskuro.Views.Public.LoginPage.LoginPageView"
-             Title="LoginPageView">
+             x:Class="Taskuro.Views.Public.LoginPage.LoginPageView">
     <Grid Background="AntiqueWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -18,7 +17,7 @@
             <Border Stroke ="DimGray" StrokeShape="RoundRectangle 10,10,10,10">
                 <Entry TextColor="Black" Placeholder="Password" ></Entry>
             </Border>
-            <Button Text="Sign In"></Button>
+            <Button Text="Sign In" Command="{Binding LoginCommand}"></Button>
             <Button Text="Sign Up"></Button>
         </StackLayout>
     </Grid>
