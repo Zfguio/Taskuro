@@ -75,7 +75,13 @@
 	  <Folder Include="Themes\" />
 	  <Folder Include="Utilities\" />
 	  <Folder Include="ViewModels\" />
-	  <Folder Include="Views\" />
+	  <Folder Include="Views\Private\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\Public\LoginPage\LoginPageView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
