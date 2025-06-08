@@ -65,7 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controls\Public\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="Constant\" />
 	  <Folder Include="Data\" />
@@ -75,13 +74,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Controls\Private\NavigationBarControl.xaml">
+	  <MauiXaml Update="Controls\NavigationBarControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Private\HomePage.xaml">
+	  <MauiXaml Update="Resources\Styles\Dark.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Public\LoginPage\LoginPageView.xaml">
+	  <MauiXaml Update="Resources\Styles\Light.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
