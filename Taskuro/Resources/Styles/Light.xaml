@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskuro.Resources.Styles.Light">
     
-    <Color x:Key="BackgroundColor">#F5F7FA</Color>
-    <Color x:Key="SurfaceCardColor">#FFFFFF</Color>
-    <Color x:Key="TextPrimaryColor">#1A1A1A</Color>
-    <Color x:Key="TextSecondaryColor">#5F6368</Color>
-    <Color x:Key="BorderShadowColor">#E0E0E0</Color>
-    <Color x:Key="AccentHighlightColor">#26A69A</Color>
-    <Color x:Key="ErrorColor">#E53935</Color>
+    <Color x:Key="BackgroundColor2">#F5F7FA</Color>
+    <Color x:Key="SurfaceCardColor2">#FFFFFF</Color>
+    <Color x:Key="TextPrimaryColor2">#1A1A1A</Color>
+    <Color x:Key="TextSecondaryColor2">#5F6368</Color>
+    <Color x:Key="BorderShadowColor2">#E0E0E0</Color>
+    <Color x:Key="AccentHighlightColor2">#26A69A</Color>
+    <Color x:Key="ErrorColor2">#E53935</Color>
     
 </ResourceDictionary>

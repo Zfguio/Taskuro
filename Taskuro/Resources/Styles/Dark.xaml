@@ -4,7 +4,6 @@
              x:Class="Taskuro.Resources.Styles.Dark">
 
     <Color x:Key="BackgroundColor">#121A25</Color>
-    <Color x:Key="BackgroundColor">#121A25</Color>
     <Color x:Key="SurfaceCardColor">#1E2A38</Color>
     <Color x:Key="TextPrimaryColor">#F5F5F5</Color>
     <Color x:Key="TextSecondaryColor">#B0BEC5</Color>
