@@ -2,15 +2,22 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskuro.Controls.Private.NavigationBarControl">
-  
-    
-    
-    <StackLayout HeightRequest="30"
-                     BackgroundColor="AliceBlue"
-                     Padding="0"
-                     Margin="0"
-                     HorizontalOptions="Start"
-                 >
-       
-    </StackLayout>
+
+
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="200,*">
+        <StackLayout Grid.Row="1" Grid.Column="0"
+                     BackgroundColor="#333"
+                     Padding="10"
+                     Spacing="20"
+                     VerticalOptions="FillAndExpand">
+            <Button Text="Dashboard" 
+                    TextColor="White"/>
+            <Button Text="Task" 
+                    TextColor="White" />
+            <Button Text="Summary" 
+                    TextColor="White" />
+            <Button Text="Settings" 
+                    TextColor="White" />
+        </StackLayout>
+    </Grid>
 </ContentView>
