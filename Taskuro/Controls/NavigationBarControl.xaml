@@ -2,13 +2,15 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskuro.Controls.Private.NavigationBarControl">
-    <VerticalStackLayout HeightRequest="30"
+  
+    
+    
+    <StackLayout HeightRequest="30"
                      BackgroundColor="AliceBlue"
                      Padding="0"
-                     Margin="0">
-        <Label 
-        Text="Your simple navigation bar"
-        VerticalOptions="Center" 
-        HorizontalOptions="Center" />
-    </VerticalStackLayout>
+                     Margin="0"
+                     HorizontalOptions="Start"
+                 >
+       
+    </StackLayout>
 </ContentView>
