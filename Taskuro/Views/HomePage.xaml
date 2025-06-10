@@ -3,8 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskuro.Views.Private.HomePage"
              xmlns:components="clr-namespace:Taskuro.Controls.Private"
-             Shell.NavBarIsVisible="False" 
+             xmlns:components2="clr-namespace:Taskuro.Controls"
+             Shell.NavBarIsVisible="True" 
              Padding="0">
-
-    <components:NavigationBarControl/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4.5*"/>
+        </Grid.ColumnDefinitions>
+        <components:NavigationBarControl Grid.Column="0" Grid.Row="0"/>
+        <components2:MainHomePageComponent Grid.Column="1" Grid.Row="0"/>
+    </Grid>
 </ContentPage>
