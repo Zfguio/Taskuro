@@ -69,7 +69,6 @@
 	  <Folder Include="Constant\" />
 	  <Folder Include="Data\" />
 	  <Folder Include="Servicies\Interfaces\" />
-	  <Folder Include="Themes\" />
 	  <Folder Include="Utilities\" />
 	</ItemGroup>
 
