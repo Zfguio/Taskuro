@@ -11,7 +11,7 @@
                      Spacing="20"
                      VerticalOptions="FillAndExpand">
             <Button Text="Dashboard" 
-                    TextColor="White"/>
+                    TextColor="White" Command="{Binding DashBoardClickCommand}"/>
             <Button Text="Task" 
                     TextColor="White" />
             <Button Text="Summary" 
