@@ -10,9 +10,11 @@ namespace Taskuro.ViewModels
     class NavigationBarControlView: BindableObject
     {
         public ICommand DashBoardClickCommand { get; set; }
+        public ICommand TaskClickCommand { get; set; }
         public NavigationBarControlView()
         {
                 DashBoardClickCommand = new Commands.DashBoardClickCommand();
+                TaskClickCommand = new Commands.TaskClickCommand();
         }
     }
 }
