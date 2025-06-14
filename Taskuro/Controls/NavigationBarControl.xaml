@@ -13,7 +13,7 @@
             <Button Text="Dashboard" 
                     TextColor="White" Command="{Binding DashBoardClickCommand}"/>
             <Button Text="Task" 
-                    TextColor="White" />
+                    TextColor="White" Command="{Binding TaskClickCommand}" />
             <Button Text="Summary" 
                     TextColor="White" />
             <Button Text="Settings" 
