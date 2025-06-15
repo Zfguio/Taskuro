@@ -2,10 +2,26 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskuro.Controls.MainTaskPageComponent">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid ColumnSpacing="20" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="0" StrokeShape="RoundRectangle 5">
+            <StackLayout>
+                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="To-Do" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+        </Border>
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="1" StrokeShape="RoundRectangle 5">
+            <StackLayout>
+                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="In Progress" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+        </Border>
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="2" StrokeShape="RoundRectangle 5">
+            <StackLayout>
+                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="Done" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+        </Border>
+    </Grid>
 </ContentView>
