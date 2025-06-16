@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskuro.Resources.Styles.Dark">
+
+    <Color x:Key="BackgroundColor">#121A25</Color>
+    <Color x:Key="SurfaceCardColor">#1E2A38</Color>
+    <Color x:Key="TextPrimaryColor">#F5F5F5</Color>
+    <Color x:Key="TextSecondaryColor">#B0BEC5</Color>
+    <Color x:Key="BorderShadowColor">#37474F</Color>
+    <Color x:Key="AccentHighlightColor">#4DB6AC</Color>
+    <Color x:Key="ErrorColor">#EF9A9A</Color>
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskuro.Controls.MainHomePageComponent">
+    <VerticalStackLayout BackgroundColor="{DynamicResource BackgroundColor}">
+        <Label 
+            Text="Welcome back!" TextColor="{DynamicResource TextPrimaryColor}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*,*,*" Margin="40" ColumnSpacing="20">
+            <Border Stroke="{DynamicResource SurfaceCardColor}" StrokeShape="RoundRectangle 5">
+                <StackLayout>
+                    <Label TextColor="{DynamicResource TextSecondaryColor}" Text="Tasks" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Border>
+            <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="1" StrokeShape="RoundRectangle 5">
+                <StackLayout>
+                    <Label TextColor="{DynamicResource TextSecondaryColor}" Text="To-Do" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Border>
+            <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="2" StrokeShape="RoundRectangle 5">
+                <StackLayout>
+                    <Label TextColor="{DynamicResource TextSecondaryColor}" Text="Time spent" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Border>
+        </Grid>
+    </VerticalStackLayout>
+</ContentView>

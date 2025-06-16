@@ -4,11 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Taskuro"
-    Title="Taskuro">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    xmlns:Pages="clr-namespace:Taskuro.Views.Private">
+    <FlyoutItem Title="Dashboard" Icon="dashboard.png" >
+        <ShellContent ContentTemplate="{DataTemplate Pages:HomePage}" />
+    </FlyoutItem>
 </Shell>
