@@ -2,7 +2,7 @@
 
 namespace Taskuro.Models
 {
-    public class Task
+    public class Tasks
     {
         [PrimaryKey,AutoIncrement]
         public int Id { get; set; }
