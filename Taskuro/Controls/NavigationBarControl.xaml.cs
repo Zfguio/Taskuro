@@ -6,6 +6,6 @@ public partial class NavigationBarControl : ContentView
 	{
 		InitializeComponent();
 		BindingContext = new ViewModels.NavigationBarControlView();
-		//test
+		//test 2
     }
 }
