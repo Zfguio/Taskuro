@@ -61,11 +61,17 @@
 
 	<ItemGroup>
 	  <AndroidResource Remove="Servicies\**" />
+	  <AndroidResource Remove="Utilities\**" />
 	  <Compile Remove="Servicies\**" />
+	  <Compile Remove="Utilities\**" />
 	  <EmbeddedResource Remove="Servicies\**" />
+	  <EmbeddedResource Remove="Utilities\**" />
 	  <MauiCss Remove="Servicies\**" />
+	  <MauiCss Remove="Utilities\**" />
 	  <MauiXaml Remove="Servicies\**" />
+	  <MauiXaml Remove="Utilities\**" />
 	  <None Remove="Servicies\**" />
+	  <None Remove="Utilities\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -81,7 +87,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Constant\" />
-	  <Folder Include="Utilities\" />
 	</ItemGroup>
 
 	<ItemGroup>
