@@ -8,20 +8,171 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="0" StrokeShape="RoundRectangle 5">
-            <StackLayout>
-                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="To-Do" HorizontalTextAlignment="Center"></Label>
-            </StackLayout>
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="0" StrokeShape="RoundRectangle 5" Padding="10">
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <!-- Title -->
+                <Label Grid.Row="0"
+               TextColor="{DynamicResource TextSecondaryColor}" 
+               Text="To-Do" 
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="16"/>
+
+                <!-- Scrollable List of Tasks -->
+                <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Tasks}"
+                        Margin="0,10"
+                        VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" CornerRadius="8" BackgroundColor="{DynamicResource SurfaceColor}" HasShadow="False">
+                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+
+                                    <!-- Title -->
+                                    <Label Grid.Row="0" Grid.Column="0" 
+                                   Text="{Binding Title}" 
+                                   FontAttributes="Bold" 
+                                   FontSize="14"/>
+
+                                    <!-- Priority -->
+                                    <Label Grid.Row="1" Grid.Column="0" 
+                                   Text="Priority: {Binding Priority}" 
+                                   FontSize="12"
+                                   TextColor="Gray"/>
+
+                                    <!-- Options Button -->
+                                    <Button Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Text="⋮"
+                                    FontSize="16"
+                                    Padding="0"
+                                    WidthRequest="30"
+                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
+                                    CommandParameter="{Binding}" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Add Button Always at Bottom -->
+                <Button Grid.Row="2"
+                Text="Add"
+                Margin="0,10,0,0"
+                Command="{Binding AddCommand}"/>
+            </Grid>
         </Border>
-        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="1" StrokeShape="RoundRectangle 5">
-            <StackLayout>
-                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="In Progress" HorizontalTextAlignment="Center"></Label>
-            </StackLayout>
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="1" StrokeShape="RoundRectangle 5" Padding="10">
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <!-- Title -->
+                <Label Grid.Row="0"
+               TextColor="{DynamicResource TextSecondaryColor}" 
+               Text="In Progress" 
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="16"/>
+
+                <!-- Scrollable List of Tasks -->
+                <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Tasks}"
+                        Margin="0,10"
+                        VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" CornerRadius="8" BackgroundColor="{DynamicResource SurfaceColor}" HasShadow="False">
+                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+
+                                    <!-- Title -->
+                                    <Label Grid.Row="0" Grid.Column="0" 
+                                   Text="{Binding Title}" 
+                                   FontAttributes="Bold" 
+                                   FontSize="14"/>
+
+                                    <!-- Priority -->
+                                    <Label Grid.Row="1" Grid.Column="0" 
+                                   Text="Priority: {Binding Priority}" 
+                                   FontSize="12"
+                                   TextColor="Gray"/>
+
+                                    <!-- Options Button -->
+                                    <Button Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Text="⋮"
+                                    FontSize="16"
+                                    Padding="0"
+                                    WidthRequest="30"
+                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
+                                    CommandParameter="{Binding}" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Add Button Always at Bottom -->
+                <Button Grid.Row="2"
+                Text="Add"
+                Margin="0,10,0,0"
+                Command="{Binding AddCommand}"/>
+            </Grid>
         </Border>
-        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="2" StrokeShape="RoundRectangle 5">
-            <StackLayout>
-                <Label TextColor="{DynamicResource TextSecondaryColor}" Text="Done" HorizontalTextAlignment="Center"></Label>
-            </StackLayout>
+
+        <Border Stroke="{DynamicResource SurfaceCardColor}" Grid.Column="2" StrokeShape="RoundRectangle 5" Padding="10">
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <!-- Title -->
+                <Label Grid.Row="0"
+               TextColor="{DynamicResource TextSecondaryColor}" 
+               Text="Done" 
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="16"/>
+
+                <!-- Scrollable List of Tasks -->
+                <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Tasks}"
+                        Margin="0,10"
+                        VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" CornerRadius="8" BackgroundColor="{DynamicResource SurfaceColor}" HasShadow="False">
+                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+
+                                    <!-- Title -->
+                                    <Label Grid.Row="0" Grid.Column="0" 
+                                   Text="{Binding Title}" 
+                                   FontAttributes="Bold" 
+                                   FontSize="14"/>
+
+                                    <!-- Priority -->
+                                    <Label Grid.Row="1" Grid.Column="0" 
+                                   Text="Priority: {Binding Priority}" 
+                                   FontSize="12"
+                                   TextColor="Gray"/>
+
+                                    <!-- Options Button -->
+                                    <Button Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Text="⋮"
+                                    FontSize="16"
+                                    Padding="0"
+                                    WidthRequest="30"
+                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
+                                    CommandParameter="{Binding}" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Add Button Always at Bottom -->
+                <Button Grid.Row="2"
+                Text="Add"
+                Margin="0,10,0,0"
+                Command="{Binding AddCommand}"/>
+            </Grid>
         </Border>
     </Grid>
 </ContentView>
