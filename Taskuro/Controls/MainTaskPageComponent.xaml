@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Taskuro.Controls.MainTaskPageComponent">
+             x:Class="Taskuro.Controls.MainTaskPageComponent"
+             x:Name="TaskPageComponent">
     <Grid ColumnSpacing="20" Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -37,19 +38,19 @@
 
                                     <!-- Priority -->
                                     <Label Grid.Row="1" Grid.Column="0" 
-                                   Text="Priority: {Binding Priority}" 
+                                   Text="{Binding Priority}" 
                                    FontSize="12"
                                    TextColor="Gray"/>
 
                                     <!-- Options Button -->
                                     <Button Grid.RowSpan="2"
-                                    Grid.Column="1"
-                                    Text="⋮"
-                                    FontSize="16"
-                                    Padding="0"
-                                    WidthRequest="30"
-                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
-                                    CommandParameter="{Binding}" />
+                                     Grid.Column="1"
+                                     Text="⋮"
+                                     FontSize="16"
+                                     Padding="0"
+                                     WidthRequest="30"
+                                     Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference TaskPageComponent}}"
+                                     CommandParameter="{Binding}" />
                                 </Grid>
                             </Frame>
                         </DataTemplate>
@@ -98,13 +99,13 @@
 
                                     <!-- Options Button -->
                                     <Button Grid.RowSpan="2"
-                                    Grid.Column="1"
-                                    Text="⋮"
-                                    FontSize="16"
-                                    Padding="0"
-                                    WidthRequest="30"
-                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
-                                    CommandParameter="{Binding}" />
+                                     Grid.Column="1"
+                                     Text="⋮"
+                                     FontSize="16"
+                                     Padding="0"
+                                     WidthRequest="30"
+                                     Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference TaskPageComponent}}"
+                                     CommandParameter="{Binding}" />
                                 </Grid>
                             </Frame>
                         </DataTemplate>
@@ -154,13 +155,13 @@
 
                                     <!-- Options Button -->
                                     <Button Grid.RowSpan="2"
-                                    Grid.Column="1"
-                                    Text="⋮"
-                                    FontSize="16"
-                                    Padding="0"
-                                    WidthRequest="30"
-                                    Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference YourPageName}}"
-                                    CommandParameter="{Binding}" />
+                                     Grid.Column="1"
+                                     Text="⋮"
+                                     FontSize="16"
+                                     Padding="0"
+                                     WidthRequest="30"
+                                     Command="{Binding BindingContext.ShowTaskOptionsCommand, Source={x:Reference TaskPageComponent}}"
+                                     CommandParameter="{Binding}" />
                                 </Grid>
                             </Frame>
                         </DataTemplate>

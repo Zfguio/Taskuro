@@ -9,7 +9,7 @@ using Taskuro.Models;
 
 namespace Taskuro.ViewModels
 {
-    public class MainTaskPageView: BindableObject
+    public class MainTaskPageView : BindableObject
     {
         private ObservableCollection<Tasks> _tasks = new ObservableCollection<Tasks>();
         public ObservableCollection<Tasks> Tasks
@@ -21,16 +21,22 @@ namespace Taskuro.ViewModels
                 OnPropertyChanged(nameof(Tasks));
             }
         }
+
+        public Command<Tasks> ShowTaskOptionsCommand { get; }
+
         public MainTaskPageView()
         {
             LoadTasks();
+            ShowTaskOptionsCommand = new Command<Tasks>(OnShowTaskOptions);
         }
+
         private async void LoadTasks()
         {
             var taskList = await Database.getTasksAsync();
-            _tasks = new ObservableCollection<Tasks>(taskList);
+            Tasks = new ObservableCollection<Tasks>(taskList);
         }
-        async void OnShowTaskOptions(Tasks task)
+
+        private async void OnShowTaskOptions(Tasks task)
         {
             string action = await Application.Current.MainPage.DisplayActionSheet(
                 $"Options for: {task.Title}",
@@ -41,14 +47,13 @@ namespace Taskuro.ViewModels
             switch (action)
             {
                 case "Edit":
-                    // well push async navigation to edit page with task details
+                    // TODO: Navigate to edit screen
                     break;
                 case "Delete":
-                    await Database.deleteTask(task); 
+                    await Database.deleteTask(task);
                     Tasks.Remove(task);
                     break;
             }
         }
-
     }
 }
