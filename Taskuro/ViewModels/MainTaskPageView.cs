@@ -30,5 +30,25 @@ namespace Taskuro.ViewModels
             var taskList = await Database.getTasksAsync();
             _tasks = new ObservableCollection<Tasks>(taskList);
         }
+        async void OnShowTaskOptions(Tasks task)
+        {
+            string action = await Application.Current.MainPage.DisplayActionSheet(
+                $"Options for: {task.Title}",
+                "Cancel",
+                null,
+                "Edit", "Delete");
+
+            switch (action)
+            {
+                case "Edit":
+                    // well push async navigation to edit page with task details
+                    break;
+                case "Delete":
+                    await Database.deleteTask(task); 
+                    Tasks.Remove(task);
+                    break;
+            }
+        }
+
     }
 }

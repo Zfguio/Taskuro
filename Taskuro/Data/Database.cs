@@ -35,5 +35,10 @@ namespace Taskuro.Data
             await InitializeDatabase();
             await db.UpdateAsync(task);
         }
+        static public async Task deleteTask(Tasks task)
+        {
+            await InitializeDatabase();
+            await db.DeleteAsync(task);
+        }
     }
 }
