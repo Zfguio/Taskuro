@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Taskuro.Data;
 using Taskuro.Models;
 
@@ -12,6 +13,7 @@ namespace Taskuro.ViewModels
     public class MainTaskPageView : BindableObject
     {
         private ObservableCollection<Tasks> _tasks = new ObservableCollection<Tasks>();
+        public ICommand AddCommand { get; set; }
         public ObservableCollection<Tasks> Tasks
         {
             get => _tasks;
@@ -28,6 +30,7 @@ namespace Taskuro.ViewModels
         {
             LoadTasks();
             ShowTaskOptionsCommand = new Command<Tasks>(OnShowTaskOptions);
+            AddCommand = new Commands.AddTaskClickCommand();
         }
 
         private async void LoadTasks()
